@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Chat-1-Project{% endblock %}</title>
+    <!-- Add your CSS links here -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <!-- Add any additional meta tags or scripts -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- This is where content from child templates will be injected -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- Add footer content here -->
+        &copy; {{ year }} Chat-1-Project
+    </footer>
+
+    <!-- Add your JavaScript scripts here -->
+    <script src="{% static 'js/script.js' %}"></script>
+    <!-- Add any additional scripts -->
+</body>
+</html>
